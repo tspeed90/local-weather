@@ -1,0 +1,62 @@
+html {
+  height: 100%;
+}
+h1 {
+  margin: none;
+  padding: none;
+  color: #FFF;
+  text-align: center;
+}
+body {
+  background-image: url('https://res.cloudinary.com/dp6beg5nw/image/upload/c_scale,w_1572/v1513611909/kyoto-waterfall_qe0f2z.jpg');
+  background-size: 100%;
+  margin: auto;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+}
+.main {
+  display: flex;
+  margin: 50px auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(50, 50, 50, 0.8);
+  border: 6px double rgba(230, 230, 230, 0.5);
+  border-radius: 10px;
+  padding: 30px;
+  width: 450px;
+  height: 400px;
+}
+.temp-display {
+  display: none;
+  margin: auto;
+  min-width: 200px;
+  color: #FFF;
+  text-align: center;
+}
+.city {
+  font-size: 2em;
+}
+.temp {
+  font-size: 3.7em;
+}
+.description {
+  margin-top: 15px;
+  font-size: 2em;
+}
+.icon {
+  margin: 15px auto;
+}
+.convert-temp {
+  display: none;
+  background-color: rgba(10, 10, 10, 0.6);
+  color: #FFF;
+  border-radius: 10px;
+  min-height: 50px;
+  width: 120px;
+  font-size: 1.5em;
+  margin-top: 15px;
+}
