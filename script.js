@@ -1,24 +1,28 @@
 let cityDisplay = document.querySelector('.city');
 let tempDisplay = document.querySelector('.temp');
 let iconDisplay = document.querySelector('.icon-display');
+let messageDisplay = document.querySelector('temp-display');
 let currentTemp;
 let degreesC;
 let city;
 let weather;
 let description;
 
-window.onload = requestLocation();
+requestLocation();
 function requestLocation() {
   if (navigator.geolocation) {
-   navigator.geolocation.getCurrentPosition(function(position) {
+    navigator.geolocation.getCurrentPosition(function(position) {
     let lat = position.coords.latitude;
     let long = position.coords.longitude;
     getWeather(lat, long);
-    });
+  }, displayError);
   } else {
-    let messageDisplay = document.querySelector('temp-display');
-    messageDisplay.innerText = "Sorry, unable to get your location."
+    displayError();
   }
+}
+
+function displayError() {
+  document.querySelector("h1").innerText = "Sorry, unable to get your location."
 }
 const getWeatherButton = document.querySelector('.get-weather');
 const convertTemp = document.querySelector('.convert-temp');
