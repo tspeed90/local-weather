@@ -49,8 +49,7 @@ function showTemp(weather) {
   convertTemp.textContent = 'Get \u00B0F';
   document.querySelector('.temp-display').style.display = 'block';
   cityDisplay.textContent = weather.city;
-  document.querySelector('.description').textContent = weather.description;
-
+  document.querySelector('.description').textContent = weather.longerDesc;
   //add font awesome icon to match weather.main info from API
   //weather.main info is from https://openweathermap.org/weather-conditions
   switch (weather) {
@@ -70,7 +69,11 @@ function showTemp(weather) {
     case 'Thunderstorms':
       iconDisplay.classList.add('fa-bolt');
       break;
+    default:
+      iconDisplay.style.display = "none";
+      break;
   }
+  document.querySelector('h1').style.display = "none";
 }
 
 

@@ -8,6 +8,7 @@ h1 {
   text-align: center;
 }
 body {
+  display: flex;
   background-image: url('https://res.cloudinary.com/dp6beg5nw/image/upload/c_scale,w_1572/v1513611909/kyoto-waterfall_qe0f2z.jpg');
   background-size: 100%;
   margin: auto;
@@ -19,36 +20,36 @@ body {
 }
 .main {
   display: flex;
-  margin: 50px auto;
+  margin: 4rem auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(50, 50, 50, 0.8);
+  background-color: rgba(60, 63, 60, 0.8);
   border: 6px double rgba(230, 230, 230, 0.5);
   border-radius: 10px;
-  padding: 30px;
-  width: 450px;
-  height: 400px;
+  padding: 3rem;
+  min-width: 28rem;
+  min-height: 25rem;
 }
 .temp-display {
   display: none;
   margin: auto;
-  min-width: 200px;
+  min-width: 12.5rem;
   color: #FFF;
   text-align: center;
 }
 .city {
-  font-size: 2em;
+  font-size: 3em;
 }
 .temp {
-  font-size: 3.7em;
+  font-size: 3rem;
 }
 .description {
   margin-top: 15px;
   font-size: 2em;
 }
 .icon {
-  margin: 15px auto;
+  margin: 1rem auto;
 }
 .convert-temp {
   display: none;
