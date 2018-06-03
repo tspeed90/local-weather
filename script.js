@@ -47,6 +47,7 @@ function showTemp(weather) {
   tempDisplay.textContent = currentTemp + ' \u00B0C';
   convertTemp.style.display = 'block';
   convertTemp.textContent = 'Get \u00B0F';
+  convertTemp.setAttribute('aria-label', 'Get the weather in fahrenheit');
   document.querySelector('.temp-display').style.display = 'block';
   cityDisplay.textContent = weather.city;
   document.querySelector('.description').textContent = weather.longerDesc;
@@ -83,10 +84,12 @@ function toggleScale() {
     currentTemp = +tempDisplay.dataset.f;
     tempDisplay.textContent = tempDisplay.dataset.f + ' \u00B0F';
     convertTemp.textContent = 'Get \u00B0C';
+    convertTemp.setAttribute('aria-label', 'Get the weather in celsius')
   } else {
     currentTemp = +tempDisplay.dataset.c;
     tempDisplay.textContent = tempDisplay.dataset.c + ' \u00B0C';
     convertTemp.textContent = 'Get \u00B0F';
+    convertTemp.setAttribute('aria-label', 'Get the weather in fahrenheit')
   }
 }
 
