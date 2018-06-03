@@ -20,7 +20,7 @@ function requestLocation() {
 }
 
 function displayError() {
-  document.querySelector("h1").innerText = "Sorry, unable to get your location."
+  document.querySelector('h1').innerText = 'Sorry, unable to get your location.'
 }
 
 
@@ -45,31 +45,29 @@ convertTemp.addEventListener('click', toggleScale);
 
 function showTemp(weather) {
   tempDisplay.textContent = currentTemp + ' \u00B0C';
-  convertTemp.style.display = "block";
-  convertTemp.textContent = "Get \u00B0F";
-  document.querySelector('.temp-display').style.display = "block";
+  convertTemp.style.display = 'block';
+  convertTemp.textContent = 'Get \u00B0F';
+  document.querySelector('.temp-display').style.display = 'block';
   cityDisplay.textContent = weather.city;
   document.querySelector('.description').textContent = weather.description;
 
   //add font awesome icon to match weather.main info from API
   //weather.main info is from https://openweathermap.org/weather-conditions
   switch (weather) {
-    case "Clear":
-      iconDisplay.classList.add("fa-sun-o");
+    case 'Clear':
+      iconDisplay.classList.add('fa-sun-o');
       break;
-    case "Rain":
+    case 'Rain':
+    case 'Drizzle':
       iconDisplay.classList.add('fa-umbrella');
       break;
-    case "Drizzle":
-      iconDisplay.classList.add('fa-umbrella');
-      break;
-    case "Snow":
+    case 'Snow':
       iconDisplay.classList.add('fa-snowflake-o');
       break;
-    case "Clouds":
+    case 'Clouds':
       iconDisplay.classList.add('fa-cloud');
       break;
-    case "Thunderstorms":
+    case 'Thunderstorms':
       iconDisplay.classList.add('fa-bolt');
       break;
   }
@@ -86,7 +84,6 @@ function toggleScale() {
     currentTemp = +tempDisplay.dataset.c;
     tempDisplay.textContent = tempDisplay.dataset.c + ' \u00B0C';
     convertTemp.textContent = 'Get \u00B0F';
-
   }
 }
 
