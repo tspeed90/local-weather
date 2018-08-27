@@ -1,0 +1,20 @@
+{
+  "name": "local-weather",
+  "version": "1.0.0",
+  "description": "a small application utilizing a weather api to display the weather using geolocation or user input",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://tspeed@bitbucket.org/tspeed/ft-weather.git"
+  },
+  "author": "t. speed",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/tspeed/ft-weather#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
