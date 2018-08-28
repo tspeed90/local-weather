@@ -1,4 +1,5 @@
-require('env2')('../../config.env');
+const fetch = require('node-fetch');
+require('dotenv').config();
 
 const checkResponse = response => {
   if (response.status !== 200) {
@@ -8,9 +9,13 @@ const checkResponse = response => {
   return response.json();
 };
 
-export const getWeather = (lat, lon) => {
-  const weatherURL = 'api.openweathermap.org/data/2.5/weather';
-  return fetch(`${weatherURL}?lat=${lat}&lon=${lon}&appid=${apiKey}`)
-    .then(checkResponse)
-    .then(response => console.log(response));
+const getWeather = (lat, lon) => {
+  const weatherURL = 'https://api.openweathermap.org/data/2.5/weather';
+  return fetch(
+    `${weatherURL}?lat=${lat}&lon=${lon}&units=metric&appid=${
+      process.env.API_KEY
+    }`
+  ).then(checkResponse);
 };
+
+module.exports = { getWeather };
