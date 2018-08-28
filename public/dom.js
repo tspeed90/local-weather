@@ -4,8 +4,8 @@ import getLocation from './getLocation';
 
 location.addEventListener('click', e => {
   getLocation().then(location =>
-    console.log(
-      `latitude: ${location.latitude}, longitude: ${location.longitude}`
+    window.location.assign(
+      `/weather?lat=${location.latitude}&lon=${location.longitude}`
     )
   );
   e.preventDefault();
