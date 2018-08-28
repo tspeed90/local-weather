@@ -1,11 +1,11 @@
-const location = document.getElementById('location');
+const locationElement = document.getElementById('location');
 
-import getLocation from './getLocation';
+import getLocation from './getLocation.js';
 
-location.addEventListener('click', e => {
-  getLocation().then(location =>
+locationElement.addEventListener('click', e => {
+  getLocation().then(position =>
     window.location.assign(
-      `/weather?lat=${location.latitude}&lon=${location.longitude}`
+      `/weather?lat=${position.latitude}&lon=${position.longitude}`
     )
   );
   e.preventDefault();
