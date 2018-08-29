@@ -1,6 +1,5 @@
 const locationElement = document.querySelector('#location');
 const searchButton = document.querySelector('.o-buttons');
-const city = document.querySelector('#city');
 
 import getLocation from './getLocation.js';
 
@@ -17,6 +16,9 @@ if (locationElement) {
 
 if (searchButton) {
   searchButton.addEventListener('click', e => {
+    const input = document.querySelector('#form__input');
+    console.log(input);
+    const city = input.value;
     window.location.assign(`/weather?city=${city}`);
     e.preventDefault();
   });
