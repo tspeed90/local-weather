@@ -55,8 +55,18 @@ a {
   padding-bottom: 2rem;
   border-bottom: 1px solid #0d7680;
 }
+
+.search__locationLink img:hover {
+  background-color: #ddd;
+  border-radius: 50%;
+  padding: 10px;
+}
+
 .search__locationLink img {
-  max-width: 5rem;
+  width: 4rem;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
 }
 
 .form {
@@ -64,9 +74,12 @@ a {
 }
 
 #form__input {
-  height: 2rem;
+  height: 1.5rem;
   width: 10rem;
+  padding: 4px;
   border: 1px solid #0d7680;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .weather__location {
