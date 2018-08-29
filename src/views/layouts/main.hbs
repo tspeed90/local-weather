@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-buttons,o-tabs@^4.2.0"></script>
-  <link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-buttons,o-tabs@^4.2.0" />
-  <title>Local Weather</title>
-</head>
+{{>head}}
 
 <body>
-  <main>
+  <main class="main">
     <h1>Weather Forecast</h1>
     {{{ body }}}
   </main>
+  {{>footer}}
   <script src="dom.js" type="module"></script>
 </body>
 
