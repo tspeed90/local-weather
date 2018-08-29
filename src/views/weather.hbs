@@ -1,6 +1,8 @@
 <section>
-  <h2>London</h2>
-  <div>Temperature {{weatherData.main.temp}} degrees</div>
-  <div>Description</div>
+  <h2>{{weatherData.name}}</h2>
+  <a href="/" id="newLocation">Change Location</a>
+  <div>{{weatherData.main.temp}} degrees</div>
+  {{!-- Accesses the 0th item in the weather array in Handlebars --}}
+  <div>{{weatherData.weather.0.description}}</div>
   <div>Image</div>
 </section>
