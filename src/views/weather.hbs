@@ -1,8 +1,10 @@
-<section>
-  <h2>{{weatherData.name}}, {{weatherData.sys.country}}</h2>
+<section class="weather">
+  <h2 class="weather__location">{{weatherData.name}}, {{weatherData.sys.country}}</h2>
   <a href="/" id="newLocation">Change Location</a>
-  <div>{{weatherData.main.temp}} degrees</div>
-  {{!-- Accesses the 0th item in the weather array in Handlebars --}}
-  <div>{{weatherData.weather.0.description}}</div>
-  <div>Image</div>
+  <div class="weather__temperature">{{weatherData.main.temp}} °C</div>
+  <div class="weather__details">
+    {{!-- Accesses the 0th item in the weather array in Handlebars --}}
+    <div class="weather__description">{{weatherData.weather.0.description}}</div>
+    <div class="weather__image">Image</div>
+  </div>
 </section>
