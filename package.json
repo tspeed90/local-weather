@@ -4,7 +4,7 @@
   "description": "a small application utilizing a weather api to display the weather using geolocation or user input",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watch",
     "start": "nodemon src/index.js"
   },
   "repository": {
@@ -22,5 +22,8 @@
     "node-fetch": "^2.2.0",
     "nodemon": "^1.18.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "^23.5.0",
+    "jest-fetch-mock": "^1.6.5"
+  }
 }
