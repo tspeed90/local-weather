@@ -39,7 +39,7 @@ const getIcon = weatherDescriptions => {
     snow: '/assets/svg/wi-day-snow.svg',
     sleet: '/assets/svg/wi-snowflake-cold.svg',
     mist: '/assets/svg/wi-day-sprinkle.svg',
-    // haze: '/assets/svg/wi-day-haze.svg',
+    haze: '/assets/svg/wi-day-haze.svg',
     smoke: '/assets/svg/wi-day-haze.svg',
     fog: '/assets/svg/wi-day-fog.svg'
   };
