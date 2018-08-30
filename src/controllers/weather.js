@@ -3,7 +3,7 @@ exports.get = (req, res) => {
   const { lat, lon, city } = req.query;
 
   const roundTemperature = temperature => {
-    return Math.trunc(temperature);
+    return Math.round(temperature);
   };
 
   getWeather(lat, lon, city)

@@ -20,9 +20,7 @@ const getWeather = (lat, lon, city) => {
   } else {
     return fetch(
       `${weatherURL}?q=${city}&units=metric&appid=${process.env.API_KEY}`
-    )
-      .then(checkResponse)
-      .catch(error => res.render('error', { error }));
+    ).then(checkResponse);
   }
 };
 
@@ -34,10 +32,16 @@ const getIcon = weatherDescriptions => {
     'overcast clouds': '/assets/svg/wi-day-cloudy-high.svg',
     'broken clouds': '/assets/svg/wi-cloudy.svg',
     'shower rain': '/assets/svg/wi-day-showers.svg',
+    'light snow': '/assets/svg/wi-day-snow.svg',
+    'shower snow': '/assets/svg/wi-day-snow.svg',
     rain: '/assets/svg/wi-day-rain.svg',
     thunderstorm: '/assets/svg/wi-day-storm-showers.svg',
     snow: '/assets/svg/wi-day-snow.svg',
-    mist: '/assets/svg/wi-day-sprinkle.svg'
+    sleet: '/assets/svg/wi-snowflake-cold.svg',
+    mist: '/assets/svg/wi-day-sprinkle.svg',
+    haze: '/assets/svg/wi-day-haze.svg',
+    smoke: '/assets/svg/wi-day-haze.svg',
+    fog: '/assets/svg/wi-day-fog.svg'
   };
 
   return icons[weatherDescriptions];
