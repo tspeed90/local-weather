@@ -4,6 +4,8 @@
   <div class="weather__temperature">{{forecast.temperature}} °C</div>
   <div class="weather__details">
     <div class="weather__description">{{forecast.description}}</div>
-    <div class="weather__image"><img src="{{forecast.icon}}" class="weather__icon"></div>
+    <figure class="weather__image">
+      <img src="{{forecast.icon}}" alt="{{forecast.description}} icon" class="weather__icon">
+    </figure>
   </div>
 </section>
