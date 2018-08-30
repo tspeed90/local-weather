@@ -20,7 +20,9 @@ const getWeather = (lat, lon, city) => {
   } else {
     return fetch(
       `${weatherURL}?q=${city}&units=metric&appid=${process.env.API_KEY}`
-    ).then(checkResponse);
+    )
+      .then(checkResponse)
+      .catch(error => res.render('error', { error }));
   }
 };
 

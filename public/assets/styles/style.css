@@ -149,6 +149,16 @@ a {
   width: 5rem;
   height: 5rem;
 }
+
+.error__message {
+  text-align: center;
+  margin: 3rem 0 5rem 0;
+}
+
+.error__title {
+  color: #36465d;
+}
+
 /* TABLET STYLING */
 @media only screen and (min-width: 600px) {
   .main {

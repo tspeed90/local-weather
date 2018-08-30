@@ -8,15 +8,17 @@ exports.get = (req, res) => {
 
   getWeather(lat, lon, city)
     .then(weatherData => {
-      return (forecast = {
+      const forecast = {
         city: weatherData.name,
         country: weatherData.sys.country,
         temperature: roundTemperature(weatherData.main.temp),
         description: weatherData.weather[0].description,
         icon: getIcon(weatherData.weather[0].description)
-      });
+      };
+      return forecast;
     })
     .then(forecast => {
       res.render('weather', { forecast });
-    });
+    })
+    .catch(error => res.render('error'));
 };
