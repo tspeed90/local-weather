@@ -5,12 +5,14 @@ exports.get = (req, res) => {
   getWeather(lat, lon, city)
     .then(weatherData => {
       return (forecast = {
-        weatherData,
+        city: weatherData.name,
+        country: weatherData.sys.country,
+        temperature: weatherData.main.temp,
+        description: weatherData.weather[0].description,
         icon: getIcon(weatherData.weather[0].description)
       });
     })
     .then(forecast => {
-      console.log(forecast);
       res.render('weather', { forecast });
     });
 };
