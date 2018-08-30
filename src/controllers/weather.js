@@ -20,5 +20,5 @@ exports.get = (req, res) => {
     .then(forecast => {
       res.render('weather', { forecast });
     })
-    .catch(error => res.render('error'));
+    .catch(() => res.status(500).render('error'));
 };
