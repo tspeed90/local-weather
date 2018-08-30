@@ -143,6 +143,12 @@ a {
   flex: none;
   box-shadow: 1px 4px 6px 2px #aaa;
 }
+
+.weather__icon {
+  filter: invert(100%);
+  width: 5rem;
+  height: 5rem;
+}
 /* TABLET STYLING */
 @media only screen and (min-width: 600px) {
   .main {
