@@ -28,7 +28,7 @@ Used Figma to create mock ups of the weather site, trying various color schemes.
 decided against it because it failed WCAG AA and AAA. I ended up settling on a simple white/navy combination that passed all levels of WCAG standards and now, I had a basic design to follow!
 My actual implementation was slightly different from this design as I decided this design might have been TOO minimalist. I felt that a little more instruction for the page would be beneficial and a heading that spanned both pages would be more consistent.
 
-<img src="http://res.cloudinary.com/dp6beg5nw/image/upload/v1535669115/weatherAppNavy_xdb1bs.png" width="400px">
+![Figma mock-up](http://res.cloudinary.com/dp6beg5nw/image/upload/v1535669115/weatherAppNavy_xdb1bs.png)
 
 ## BONUSES
 
@@ -42,9 +42,9 @@ This application accounts for accessibility in several ways:
 - Loads quickly over fast 3G (2.5 seconds), 8-9 seconds on slow 3G
 - Works without javascript enabled if user enters city name
 
-<img src="http://res.cloudinary.com/dp6beg5nw/image/upload/v1535669098/a11CheckSearch_ldmjat.png" width="400px">
+![accessibility audit](http://res.cloudinary.com/dp6beg5nw/image/upload/v1535669098/a11CheckSearch_ldmjat.png)
 
-<img src="http://res.cloudinary.com/dp6beg5nw/image/upload/v1535669092/a11yCheckWeather_r5d8zl.png" width="400px">
+![accessibility audit](http://res.cloudinary.com/dp6beg5nw/image/upload/v1535669092/a11yCheckWeather_r5d8zl.png)
 
 ### Responsiveness
 
