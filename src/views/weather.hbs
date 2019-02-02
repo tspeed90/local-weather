@@ -1,8 +1,13 @@
 <section class="weather">
   <h2 class="weather__location">{{forecast.city}}, {{forecast.country}}</h2>
-  <a href="/" id="weather__locationLink">Change Location</a>
-  <div class="weather__temperature">{{forecast.temperature}} °C</div>
-  <div class="weather__details">
+  <div class="weather__settings">
+    <a href="/" id="weather__locationLink">Change Location</a>
+    <span>|</span>
+    <button class="weather__convert-btn">Change Unit</button>
+  </div>
+  <div class="weather__temperature"><span class="temp-c">{{forecast.temperatureC}}</span><span class="temp-f hidden">{{forecast.temperatureF}}</span></div>
+  <div class="
+    weather__details">
     <div class="weather__description">{{forecast.description}}</div>
     <figure class="weather__image">
       <img src="{{forecast.icon}}" alt="{{forecast.description}} icon" class="weather__icon">

@@ -89,8 +89,24 @@ a {
 }
 
 #weather__locationLink {
-  display: block;
+  display: inline;
   text-align: center;
+}
+.weather__settings {
+  margin: 0 auto;
+  text-align: center;
+  width: 70%;
+}
+
+.weather__convert-btn {
+  display: inline;
+  text-align: center;
+  color: #0d7680;
+  background: inherit;
+  font-size: 1rem;
+  text-decoration: underline;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .weather__temperature {
@@ -150,6 +166,10 @@ a {
   filter: invert(100%);
   width: 5rem;
   height: 5rem;
+}
+
+.hidden {
+  display: none;
 }
 
 .error__message {

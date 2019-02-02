@@ -6,12 +6,17 @@ exports.get = (req, res) => {
     return Math.round(temperature);
   };
 
+  const convertTemp = degreesC => {
+    return Math.round((9 / 5) * degreesC + 32);
+  };
+
   getWeather(lat, lon, city)
     .then(weatherData => {
       const forecast = {
         city: weatherData.name,
         country: weatherData.sys.country,
-        temperature: roundTemperature(weatherData.main.temp),
+        temperatureC: roundTemperature(weatherData.main.temp) + ' °C',
+        temperatureF: convertTemp(weatherData.main.temp) + ' °F',
         description: weatherData.weather[0].description,
         icon: getIcon(weatherData.weather[0].description)
       };

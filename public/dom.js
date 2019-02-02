@@ -12,3 +12,10 @@ if (locationElement) {
     e.preventDefault();
   });
 }
+
+document
+  .querySelector('.weather__convert-btn')
+  .addEventListener('click', () => {
+    document.querySelector('.temp-c').classList.toggle('hidden');
+    document.querySelector('.temp-f').classList.toggle('hidden');
+  });
